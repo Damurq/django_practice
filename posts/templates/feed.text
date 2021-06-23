@@ -1,0 +1,12 @@
+Hola con {{load static}} me dio error, tanto con el servidor apache como con el que trae Django.
+Tuve que ponerlo de esta forma:
+{% load static %}
+
+Y entonces con el servidor de Django funionó muy bien los estilos de css no así en el servidor Apache que no encontraba el fichero. Para este último tuve que agregar esto en el fichero de configuración:
+
+Alias /static/ “D:/Proyectos Java/platzigram/src/posts/static/”
+<Directory “D:/Proyectos Java/platzigram/src/posts/static”>
+Require all granted
+</Directory>
+
+Y vingo funcionó todo de maravilla en ambos servidores

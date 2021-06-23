@@ -1,0 +1,87 @@
+<html lang="es" class="translated-ltr">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>Platzigram</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" charset="UTF-8"
+        href="https://translate.googleapis.com/translate_static/css/translateelement.css">
+    <linkrel="stylesheet"href="{% static 'css/app.css' %}" />
+</head>
+
+<body>
+    <br><br>
+    <div class="container">
+        <div class="row">
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">
+                    {% para publicación en publicaciones%}
+                </font>
+            </font>
+            <div class="col-lg-4 offset-lg-4">
+                <div class="media">
+                    <img class="mr-3 rounded-circle" src="{{ post.user.picture }}" alt="{{post.user.name}}">
+                    <div class="media-body">
+                        <h5 class="mt-0">
+                            <font style="vertical-align: inherit;">
+                                <font style="vertical-align: inherit;">{{post.user.name}}</font>
+                            </font>
+                        </h5>
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">
+                                {{post.timestamp}}
+                            </font>
+                        </font>
+                    </div>
+                </div>
+                <img class="img-fluid mt-3 border rounded" src="{{ post.photo }}" alt="{{ título de la entrada }}">
+                <h6 class="ml-1 mt-1">
+                    <font style="vertical-align: inherit;">
+                        <font style="vertical-align: inherit;">{{ título de la entrada }}</font>
+                    </font>
+                </h6>
+            </div>
+            <font style="vertical-align: inherit;">
+                <font style="vertical-align: inherit;">
+                    {% endfor%}
+                </font>
+            </font>
+        </div>
+    </div>
+    <div id="goog-gt-tt" class="skiptranslate" dir="ltr">
+        <div style="padding: 8px;">
+            <div>
+                <div class="logo"><img src="https://www.gstatic.com/images/branding/product/1x/translate_24dp.png"
+                        width="20" height="20" alt="Google Traductor de Google"></div>
+            </div>
+        </div>
+        <div class="top" style="padding: 8px; float: left; width: 100%;">
+            <h1 class="title gray">Texto original</h1>
+        </div>
+        <div class="middle" style="padding: 8px;">
+            <div class="original-text"></div>
+        </div>
+        <div class="bottom" style="padding: 8px;">
+            <div class="activity-links"><span class="activity-link">Sugiere una traducción mejor</span><span
+                    class="activity-link"></span></div>
+            <div class="started-activity-container">
+                <hr style="color: #CCC; background-color: #CCC; height: 1px; border: none;">
+                <div class="activity-root"></div>
+            </div>
+        </div>
+        <div class="status-message" style="display: none;"></div>
+    </div>
+
+
+    <div class="goog-te-spinner-pos">
+        <div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner"
+                width="96px" height="96px" viewBox="0 0 66 66">
+                <circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33"
+                    r="30"></circle>
+            </svg></div>
+    </div>
+</body>
+
+</html>
