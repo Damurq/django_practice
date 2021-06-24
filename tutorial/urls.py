@@ -23,5 +23,5 @@ urlpatterns = [
     path('',hi2),
     path('admin/', admin.site.urls),
     path('hi/<str:name>/<int:age>/', say_hi),
-
+    path('post/',views.list_posts2)
 ]

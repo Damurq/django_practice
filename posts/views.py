@@ -51,4 +51,4 @@ def list_posts(request):
     return HttpResponse('<br>'.join(content))
 
 def list_posts2(request):
-    return render (request,'feed.html',posts)
+    return render (request,'feed.html',{'posts': posts})
